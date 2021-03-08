@@ -1,0 +1,15 @@
+.home-border{
+    border: 1px solid red
+}
+.home-area{
+    margin:20px;
+    padding: 20px;
+}
+
+@media(max-width: 750px){
+    .section-section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+

@@ -8,38 +8,36 @@ import Home from './components/Home/Home';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+import NotFound from "./components/NotFound/NotFound";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <Router>
       <div>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
+          <Header></Header>
         </nav>
 
         <Switch>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
+          <Route path="/countries">
             <Country />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+
         </Switch>
       </div>
     </Router>
