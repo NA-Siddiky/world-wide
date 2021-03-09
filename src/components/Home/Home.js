@@ -10,7 +10,7 @@ const Home = () => {
             <Row className="section-section">
                 <Col xs={12} md={8}>
                     <div>
-                        <h1 className="home-border">Test1</h1>
+                        {/* <h1 className="home-border">Test1</h1> */}
                         <Country></Country>
                     </div>
                 </Col>
