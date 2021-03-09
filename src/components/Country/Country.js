@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import CountryInfo from '../CountryInfo/CountryInfo';
-import "./Country.css"
+import "./Country.css";
 
-const Country = () => {
-    const [countries, setCountries] = useState([]);
+const Country = (props) => {
 
-
-    useEffect(() => {
-        const url = 'https://restcountries.eu/rest/v2/all';
-        fetch(url)
-            .then(response => response.json())
-            .then(data => setCountries(data));
-    }, []);
-
+    const countries = props.country;
 
     return (
         <div className="country-div">

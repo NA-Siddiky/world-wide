@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import Country from '../Country/Country';
 import './Home.css';
 
-const Home = () => {
+const Home = (props) => {
 
     return (
         <div className="home-area">
@@ -11,7 +11,7 @@ const Home = () => {
                 <Col xs={12} md={8}>
                     <div>
                         {/* <h1 className="home-border">Test1</h1> */}
-                        <Country></Country>
+                        <Country country={props.country}></Country>
                     </div>
                 </Col>
                 <Col xs={12} md={4}>
